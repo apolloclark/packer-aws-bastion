@@ -12,7 +12,7 @@
   roles:
     - geerlingguy.firewall
     - geerlingguy.git
-    - apolloclark.nano-highlighting
+    - apolloclark.nano_highlighting
     - apolloclark.kibana
     - apolloclark.auditbeat
     - apolloclark.filebeat

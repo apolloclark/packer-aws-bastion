@@ -2,7 +2,7 @@
 ---
 - src: geerlingguy.firewall
 - src: geerlingguy.git                # https://github.com/geerlingguy/ansible-role-git
-- src: apolloclark.nano-highlighting  # https://github.com/apolloclark/ansible-role-nano-highlighting
+- src: apolloclark.nano_highlighting  # https://github.com/apolloclark/ansible-role-nano-highlighting
 - src: geerlingguy.java               # https://github.com/geerlingguy/ansible-role-java
 - src: apolloclark.zookeeper          # https://github.com/apolloclark/ansible-role-zookeeper
 - src: apolloclark.kafka              # https://github.com/apolloclark/ansible-role-kafka
