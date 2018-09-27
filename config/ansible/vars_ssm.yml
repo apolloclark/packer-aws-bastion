@@ -1,0 +1,5 @@
+# http://docs.ansible.com/ansible/latest/playbooks_variables.html#variable-file-separation
+---
+hostname: all
+
+kafka_ip: "{{ lookup('aws_ssm', '/elk/kafka-ec2_private_ip') }}"

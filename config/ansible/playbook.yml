@@ -1,0 +1,22 @@
+# http://docs.ansible.com/ansible/latest/playbooks_best_practices.html#directory-layout
+---
+# playbook.yml
+
+- hosts: all
+  connection: ssh
+  gather_facts: yes
+  become: true
+  vars_files:
+    - "vars_ssm.yml"
+    - "vars.yml"
+  roles:
+    - geerlingguy.firewall
+    - geerlingguy.git
+    - apolloclark.nano-highlighting
+    - apolloclark.kibana
+    - apolloclark.auditbeat
+    - apolloclark.filebeat
+    - apolloclark.packetbeat
+    - apolloclark.metricbeat
+    - apolloclark.heartbeat
+    - apolloclark.osquery
