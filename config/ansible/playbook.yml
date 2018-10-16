@@ -10,13 +10,9 @@
     - "vars_ssm.yml"
     - "vars.yml"
   roles:
-    - geerlingguy.firewall
-    - geerlingguy.git
-    - apolloclark.nano_highlighting
-    - apolloclark.kibana
+    - apolloclark.osquery
     - apolloclark.auditbeat
     - apolloclark.filebeat
+    - apolloclark.heartbeat
     - apolloclark.packetbeat
     - apolloclark.metricbeat
-    - apolloclark.heartbeat
-    - apolloclark.osquery

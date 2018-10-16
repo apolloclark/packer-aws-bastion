@@ -11,6 +11,26 @@ firewall_allowed_tcp_ports:
 
 # kafka_ip: "127.0.0.1"
 
+
+# apolloclark/auditbeat
+auditbeat:
+  version: "6.4.0"
+  output:
+    kafka:
+      enabled: true
+      hosts:
+       - "{{ kafka_ip }}:9092"
+
+# apolloclark/filebeat
+filebeat:
+  version: "6.4.0"
+  output:
+    elasticsearch:
+    kafka:
+      enabled: true
+      hosts:
+       - "{{ kafka_ip }}:9092"
+
 # apolloclark/heartbeat
 heartbeat:
   version: "6.4.0"
@@ -29,25 +49,6 @@ heartbeat:
 
 # apolloclark/metricbeat
 metricbeat:
-  version: "6.4.0"
-  output:
-    kafka:
-      enabled: true
-      hosts:
-       - "{{ kafka_ip }}:9092"
-
-# apolloclark/filebeat
-filebeat:
-  version: "6.4.0"
-  output:
-    elasticsearch:
-    kafka:
-      enabled: true
-      hosts:
-       - "{{ kafka_ip }}:9092"
-
-# apolloclark/auditbeat
-auditbeat:
   version: "6.4.0"
   output:
     kafka:
