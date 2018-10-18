@@ -55,3 +55,12 @@ metricbeat:
       enabled: true
       hosts:
        - "{{ kafka_ip }}:9092"
+
+# apolloclark/packetbeat
+packetbeat:
+  version: "6.4.0"
+  output:
+    kafka:
+      enabled: true
+      hosts:
+       - "{{ kafka_ip }}:9092"
