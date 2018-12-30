@@ -14,7 +14,7 @@ firewall_allowed_tcp_ports:
 
 # apolloclark/auditbeat
 auditbeat:
-  version: "6.4.0"
+  version: "6.4.2"
   output:
     kafka:
       enabled: true
@@ -23,7 +23,7 @@ auditbeat:
 
 # apolloclark/filebeat
 filebeat:
-  version: "6.4.0"
+  version: "6.4.2"
   output:
     elasticsearch:
     kafka:
@@ -33,7 +33,7 @@ filebeat:
 
 # apolloclark/heartbeat
 heartbeat:
-  version: "6.4.0"
+  version: "6.4.2"
   monitors:
     tcp:
       schedule: "'@every 5s'"
@@ -49,7 +49,7 @@ heartbeat:
 
 # apolloclark/metricbeat
 metricbeat:
-  version: "6.4.0"
+  version: "6.4.2"
   output:
     kafka:
       enabled: true
@@ -58,7 +58,7 @@ metricbeat:
 
 # apolloclark/packetbeat
 packetbeat:
-  version: "6.4.0"
+  version: "6.4.2"
   output:
     kafka:
       enabled: true
