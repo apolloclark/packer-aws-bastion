@@ -1,5 +1,49 @@
 require 'spec_helper'
 
+# Define packages
+Packages = {
+  'filebeat' => {
+    version: '6.4.2'
+  },
+  'metricbeat' => {
+    version: '6.4.2'
+  },
+  'heartbeat-elastic' => {
+    version: '6.4.2'
+  },
+  'packetbeat' => {
+    version: '6.4.2'
+  },
+  'auditbeat' => {
+    version: '6.4.2'
+  },
+  'osquery' => {
+    version: '2.11.2-1.linux'
+  }
+}
+
+# Define Installed services
+InstalledServices = [
+  'filebeat',
+  'metricbeat',
+  'heartbeat-elastic',
+  'packetbeat',
+  'auditbeat',
+  'osqueryd'
+]
+
+# Define Active services
+ActiveServices = [
+  'filebeat',
+  'metricbeat',
+  'heartbeat-elastic',
+  'packetbeat',
+  'auditbeat',
+  'osqueryd'
+]
+
+
+
 # https://www.singlestoneconsulting.com/articles/writing-efficient-infrastructure-tests-with-serverspec
 # Verify packages
 Packages.each do |name, details|
