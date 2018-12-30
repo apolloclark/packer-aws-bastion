@@ -2,8 +2,8 @@
 ---
 # playbook.yml
 
-- hosts: all
-  connection: ssh
+- hosts: localhost
+  connection: local
   gather_facts: yes
   become: true
   vars_files:

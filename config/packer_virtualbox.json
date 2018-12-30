@@ -42,27 +42,23 @@
   ],
   "provisioners": [
     {
-      "type": "shell-local",
-      "command": "ansible-galaxy install --force -v --roles-path='./ansible/roles' --role-file='./ansible/requirements.yml'"
-    },
-    {
-      "type": "ansible",
-      "user": "{{ user `ansible_user` }}",
+      "type": "ansible-local",
+      "playbook_dir": "./ansible",
+      "galaxy_file": "./ansible/requirements.yml",
       "playbook_file": "./ansible/playbook.yml"
     },
     {
-	  "type": "file",
-	  "source": "restart_elk_services.sh",
-	  "destination": "/home/vagrant/restart_elk_services.sh"
-	},
+      "type": "file",
+      "source": "./serverspec",
+      "destination": "/tmp/"
+    },
     {
-	  "type": "file",
-	  "source": "check_elk_services.sh",
-	  "destination": "/home/vagrant/check_elk_services.sh"
-	},
-    {
-      "type": "shell-local",
-      "command": "export PACKER_BUILDER='virtualbox-ovf'; export VM_NAME='{{ user `vm_name` }}'; rake spec"
+      "type": "shell",
+      "execute_command": "echo '{{ user `ssh_password` }}' | sudo -E -S bash '{{.Path}}'",
+      "inline": [
+        "gem install serverspec",
+        "cd /tmp/serverspec; rake spec"
+      ]
     }
   ],
   "post-processors": [
