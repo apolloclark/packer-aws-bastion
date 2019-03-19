@@ -3,19 +3,19 @@ require 'spec_helper'
 # Define packages
 Packages = {
   'filebeat' => {
-    version: '6.4.2'
+    version: '6.6.2'
   },
   'metricbeat' => {
-    version: '6.4.2'
+    version: '6.6.2'
   },
   'heartbeat-elastic' => {
-    version: '6.4.2'
+    version: '6.6.2'
   },
   'packetbeat' => {
-    version: '6.4.2'
+    version: '6.6.2'
   },
   'auditbeat' => {
-    version: '6.4.2'
+    version: '6.6.2'
   },
   'osquery' => {
     version: '2.11.2-1.linux'
